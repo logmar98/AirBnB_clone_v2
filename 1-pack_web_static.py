@@ -14,7 +14,7 @@ def do_pack():
     output_filename = f"versions/web_static_{creat_time}.tgz"
 
     os.makedirs("versions", exist_ok=True)
-    
+
     if local("tar -cvzf {} web_static".format(output_filename)).failed is True:
         return None
 
