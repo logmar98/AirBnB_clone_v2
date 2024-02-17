@@ -33,7 +33,7 @@ def python(text="is cool"):
 
 
 @app.route("/number/<n>", strict_slashes=False)
-def python(n):
+def number(n):
     """display python"""
     if (isinstance(n, int)):
         return "{} is a number".format(escape(n.replace("_", " ")))
