@@ -34,8 +34,8 @@ def python(text="is cool"):
 
 @app.route("/number/<n>", strict_slashes=False)
 def number(n):
-    """display python"""
-    if (isinstance(n, int)):
+    """display number"""
+    if (isinstance(escape(n.replace("_", " ")), int)):
         return "{} is a number".format(escape(n.replace("_", " ")))
 
 
