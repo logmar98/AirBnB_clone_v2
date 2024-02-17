@@ -22,7 +22,7 @@ def hbnb():
 @app.route("/c/<text>", strict_slashes=False)
 def c(text):
     """display C"""
-    return "C {}".format(escape(text))
+    return "C {}".format(escape(text.replace("_", " ")))
 
 
 if __name__ == '__main__':
